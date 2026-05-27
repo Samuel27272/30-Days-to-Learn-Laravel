@@ -77,7 +77,7 @@
             <el-disclosure id="mobile-menu" hidden class="block md:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                     <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                    <x-nav-link href="/about" :active="request()->is('/')">About</x-nav-link>
+                    <x-nav-link href="/jobs" :active="request()->is('/')">Jobs</x-nav-link>
                     <x-nav-link href="/contact" :active="request()->is('/')">Contact</x-nav-link>
                 </div>
                 <div class="border-t border-white/10 pt-4 pb-3">
