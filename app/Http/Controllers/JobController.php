@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
-use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
@@ -12,7 +11,7 @@ class JobController extends Controller
         $jobs = Job::with('employer')->latest()->simplePaginate(3);
 
         return view('jobs.index', [
-            'jobs' => $jobs
+            'jobs' => $jobs,
         ]);
     }
 
@@ -30,13 +29,13 @@ class JobController extends Controller
     {
         request()->validate([
             'title' => ['required', 'min:3'],
-            'salary' => ['required']
+            'salary' => ['required'],
         ]);
 
         Job::create([
             'title' => request('title'),
             'salary' => request('salary'),
-            'employer_id' => 1
+            'employer_id' => 1,
         ]);
 
         return redirect('/jobs');
@@ -53,7 +52,7 @@ class JobController extends Controller
 
         request()->validate([
             'title' => ['required', 'min:3'],
-            'salary' => ['required']
+            'salary' => ['required'],
         ]);
 
         $job->update([
@@ -61,7 +60,7 @@ class JobController extends Controller
             'salary' => request('salary'),
         ]);
 
-        return redirect('/jobs/' . $job->id);
+        return redirect('/jobs/'.$job->id);
     }
 
     public function destroy(Job $job)
