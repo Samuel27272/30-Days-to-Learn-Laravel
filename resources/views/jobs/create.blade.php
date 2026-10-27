@@ -1,14 +1,12 @@
 <x-layout>
-    <x-slot:heading>
-        Create Job
-    </x-slot:heading>
+    <x-slot:heading>Create Job</x-slot:heading>
 
     <form method="POST" action="/jobs">
         @csrf
 
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
-                <h2 class="text-base font-semibold leading-7 text-gray-900">Create a New Job</h2>
+                <h2 class="text-base leading-7 font-semibold text-gray-900">Create a New Job</h2>
                 <p class="mt-1 text-sm leading-6 text-gray-600">We just need a handful of details from you.</p>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -36,7 +34,7 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+            <button type="button" class="text-sm leading-6 font-semibold text-gray-900">Cancel</button>
             <x-form-button>Save</x-form-button>
         </div>
     </form>
