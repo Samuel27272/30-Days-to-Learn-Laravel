@@ -1,7 +1,5 @@
 <x-layout>
-    <x-slot:heading>
-        Register
-    </x-slot:heading>
+    <x-slot:heading>Register</x-slot:heading>
 
     <form method="POST" action="/register">
         @csrf
@@ -53,8 +51,12 @@
                         <x-form-label for="password_confirmation">Confirm Password</x-form-label>
 
                         <div class="mt-2">
-                            <x-form-input name="password_confirmation" id="password_confirmation" type="password"
-                                required />
+                            <x-form-input
+                                name="password_confirmation"
+                                id="password_confirmation"
+                                type="password"
+                                required
+                            />
 
                             <x-form-error name="password_confirmation" />
                         </div>
@@ -64,7 +66,7 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
+            <a href="/" class="text-sm leading-6 font-semibold text-gray-900">Cancel</a>
             <x-form-button>Register</x-form-button>
         </div>
     </form>

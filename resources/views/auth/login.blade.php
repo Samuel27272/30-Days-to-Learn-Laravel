@@ -1,7 +1,5 @@
 <x-layout>
-    <x-slot:heading>
-        Log In
-    </x-slot:heading>
+    <x-slot:heading>Log In</x-slot:heading>
 
     <form method="POST" action="/login">
         @csrf
@@ -33,7 +31,7 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
+            <a href="/" class="text-sm leading-6 font-semibold text-gray-900">Cancel</a>
             <x-form-button>Log In</x-form-button>
         </div>
     </form>
